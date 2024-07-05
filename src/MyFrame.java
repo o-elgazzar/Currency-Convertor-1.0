@@ -1,7 +1,5 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class MyFrame extends JFrame {
 
@@ -34,11 +32,13 @@ public class MyFrame extends JFrame {
 
         fromLabel = new JLabel("From:");
         this.add(fromLabel);
+
         fromCurrency = new JComboBox<>(new String[]{"USD", "EUR", "GBP", "EGP", "KRW"});
         this.add(fromCurrency);
 
         toLabel = new JLabel("To:");
         this.add(toLabel);
+
         toCurrency = new JComboBox<>(new String[]{"USD", "EUR", "GBP", "EGP", "KRW"});
         this.add(toCurrency);
 
@@ -52,11 +52,7 @@ public class MyFrame extends JFrame {
         resultLabel = new JLabel("");
         this.add(resultLabel);
 
-        convertButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                performConversion();
-            }
-        });
+        convertButton.addActionListener(_ -> performConversion());
 
         this.getContentPane().setBackground(Color.BLACK);
 
@@ -85,18 +81,6 @@ public class MyFrame extends JFrame {
         } catch (NumberFormatException e) {
             resultLabel.setText("Please enter a valid number.");
         }
-    }
-
-
-    private double convertCurrency(double amount, String fromCurrency, String toCurrency) {
-        double exchangeRate = fetchExchangeRatefromAPI(fromCurrency, toCurrency);
-        return amount * exchangeRate;
-    }
-
-    private double fetchExchangeRatefromAPI(String fromCurrency, String toCurrency) {
-        double exchangeRate = 0.0;
-
-        return exchangeRate;
     }
 
 }
