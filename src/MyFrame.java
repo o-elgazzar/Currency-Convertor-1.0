@@ -33,13 +33,13 @@ public class MyFrame extends JFrame {
         fromLabel = new JLabel("From:");
         this.add(fromLabel);
 
-        fromCurrency = new JComboBox<>(new String[]{"USD", "EUR", "GBP", "EGP", "KRW"});
+        fromCurrency = new JComboBox<>(new String[]{"USD", "EUR", "GBP", "EGP", "KRW", "SAR"});
         this.add(fromCurrency);
 
         toLabel = new JLabel("To:");
         this.add(toLabel);
 
-        toCurrency = new JComboBox<>(new String[]{"USD", "EUR", "GBP", "EGP", "KRW"});
+        toCurrency = new JComboBox<>(new String[]{"USD", "EUR", "GBP", "EGP", "KRW", "SAR"});
         this.add(toCurrency);
 
         convertButton = new JButton("Convert");
