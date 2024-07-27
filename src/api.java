@@ -6,7 +6,7 @@ import java.io.IOException;
 import org.json.JSONObject;
 
 public class api {
-    private static final String api_key = "a1ed71679f16463fbd80017473903d38";
+    
 
     public static double getExchangeRate(String fromCurrency, String toCurrency) {
         HttpClient client = HttpClient.newHttpClient();
